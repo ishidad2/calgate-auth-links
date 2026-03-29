@@ -1,0 +1,9 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [{
+      "appID": "55R789V4YY.dev.daisan.calgate",
+      "paths": ["/oauth2redirect"]
+    }]
+  }
+}
