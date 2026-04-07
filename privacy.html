@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー - CalGate</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #1a1a1a;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem;
+    }
+    h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; margin-top: 2rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.25rem; }
+    p, ul { margin: 0.6rem 0; }
+    ul { padding-left: 1.5rem; }
+    a { color: #6366f1; }
+    .updated { color: #6b7280; font-size: 0.9rem; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+
+<h1>プライバシーポリシー</h1>
+<p>CalGate（以下「本アプリ」）は、石田大三（以下「開発者」）が開発・提供するモバイルアプリです。本ポリシーは、本アプリが収集・利用する情報について説明します。</p>
+
+<h2>1. はじめに / 基本方針</h2>
+<p>本アプリは、複数の Google Calendar アカウントを管理し、重複予定を防ぐためのツールです。開発者はユーザーのプライバシーを尊重し、必要最小限の情報のみを使用します。<strong>本アプリはサーバーを持たず、すべてのデータはユーザーの端末内のみに保存されます。</strong></p>
+
+<h2>2. 収集する情報</h2>
+<p>本アプリが収集・保存する情報は以下のとおりです。</p>
+<ul>
+  <li><strong>Google アカウント情報：</strong>メールアドレス、表示名</li>
+  <li><strong>OAuth アクセストークン / リフレッシュトークン：</strong>Google Calendar API へのアクセスに必要な認証情報</li>
+  <li><strong>カレンダーイベント情報：</strong>予定のタイトル、開始日時、終了日時</li>
+  <li><strong>購入状態：</strong>ワークスペース機能アンロックの購入済み / 未購入フラグ（暗号化なし）</li>
+  <li><strong>アプリ設定：</strong>アカウントのカスタムラベル、テーマカラー、デフォルト予定時間など</li>
+</ul>
+<p>広告 ID、位置情報、連絡先、写真、マイクなどの情報は収集しません。</p>
+
+<h2>3. 情報の利用目的</h2>
+<ul>
+  <li>Google アカウント情報：複数アカウントの識別と Google Calendar API への書き込みに使用します</li>
+  <li>カレンダーイベント情報：他のアカウントへのブロック予定（不在ブロック）作成のみに使用します</li>
+  <li>購入状態：ワークスペース機能の利用可否判定に使用します</li>
+  <li>アプリ設定：ユーザーが設定したカスタマイズ内容の保持に使用します</li>
+</ul>
+
+<h2>4. 情報の保存・管理</h2>
+<p>すべての情報はユーザーの端末内にのみ保存されます。外部サーバーへの送信は行いません。</p>
+<ul>
+  <li><strong>OAuth トークン：</strong>端末の Keychain（iOS）/ Keystore（Android）に暗号化して保存されます（<code>flutter_secure_storage</code> を使用）</li>
+  <li><strong>購入状態・アプリ設定：</strong>端末のローカルストレージに保存されます（<code>shared_preferences</code> を使用）。<em>この領域は暗号化されていません。</em></li>
+</ul>
+
+<h2>5. 第三者への情報提供</h2>
+<p>開発者はユーザーの個人情報を第三者に販売・賃貸しません。以下のサービスとのみデータをやりとりします。</p>
+<ul>
+  <li><strong>Google LLC：</strong>Google Calendar API および OAuth 2.0 認証のため。<a href="https://policies.google.com/privacy" target="_blank">Google プライバシーポリシー</a></li>
+  <li><strong>Apple Inc.：</strong>App Store でのアプリ内課金処理のため（iOS）。<a href="https://www.apple.com/legal/privacy/" target="_blank">Apple プライバシーポリシー</a></li>
+  <li><strong>Google LLC（Google Play）：</strong>Google Play でのアプリ内課金処理のため（Android）。</li>
+</ul>
+
+<h2>6. アカウント間のデータ利用</h2>
+<p>本アプリの中核機能として、あるアカウント（例：個人アカウント A）に入力した予定の情報（タイトル、日時）を使用して、他のアカウント（例：会社アカウント B）にブロック予定を自動作成します。このデータは端末内でのみ処理され、外部サーバーには送信されません。</p>
+<p>プライバシーモードが有効な場合、他アカウントへは「不在」のみが送信され、予定タイトル・場所・説明は一切送信されません。</p>
+
+<h2>7. データの保持期間と削除</h2>
+<ul>
+  <li><strong>アカウントのサインアウト時：</strong>そのアカウントの OAuth トークンおよび設定情報が端末から削除されます</li>
+  <li><strong>アプリのアンインストール時：</strong>iOS では Keychain データを除くすべてのデータが削除されます。Android ではすべてのデータが削除されます</li>
+</ul>
+<p>ユーザーはアプリ内のアカウント設定画面から、いつでも各アカウントを削除できます。</p>
+
+<h2>8. お子様のプライバシー</h2>
+<p>本アプリは 13 歳未満のお子様を対象としていません。13 歳未満のお子様から意図的に個人情報を収集することはありません。万一 13 歳未満のお子様の情報が収集されていることが判明した場合は、速やかに削除します。</p>
+
+<h2>9. 個人情報保護法（APPI）への対応</h2>
+<p>本アプリは、日本の個人情報の保護に関する法律（個人情報保護法）に基づき、ユーザーの個人情報を適切に管理します。個人情報に関するお問い合わせ、開示・訂正・削除のご要望は、下記のお問い合わせ先までご連絡ください。</p>
+
+<h2>10. プライバシーポリシーの変更</h2>
+<p>本ポリシーは予告なく変更される場合があります。重要な変更があった場合は、アプリ内通知またはアプリストアのアップデートノートでお知らせします。変更後のポリシーは本ページに掲載した時点で効力を生じます。</p>
+
+<h2>11. お問い合わせ先</h2>
+<p>本ポリシーに関するお問い合わせは、以下にご連絡ください。</p>
+<ul>
+  <li>開発者：石田大三</li>
+  <li>メール：<a href="mailto:ishida@daisan.dev">ishida@daisan.dev</a></li>
+</ul>
+
+<p class="updated">最終更新日: 2026年4月7日</p>
+
+</body>
+</html>

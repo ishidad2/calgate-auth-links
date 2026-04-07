@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - CalGate</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #1a1a1a;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem;
+    }
+    h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; margin-top: 2rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.25rem; }
+    p, ul { margin: 0.6rem 0; }
+    ul { padding-left: 1.5rem; }
+    a { color: #6366f1; }
+    .updated { color: #6b7280; font-size: 0.9rem; margin-top: 2rem; }
+    .note { background: #f3f4f6; border-left: 3px solid #6366f1; padding: 0.5rem 1rem; margin: 1rem 0; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="note">In the event of any discrepancy between the Japanese and English versions of this policy, the Japanese version shall prevail. The Japanese version is available at <a href="https://auth.daisan.dev/privacy">https://auth.daisan.dev/privacy</a>.</p>
+
+<p>CalGate (the "App") is developed and provided by Daizo Ishida (the "Developer"). This policy describes the information the App collects and how it is used.</p>
+
+<h2>1. Overview</h2>
+<p>CalGate is a tool for managing multiple Google Calendar accounts and preventing scheduling conflicts. The Developer respects user privacy and uses only the minimum necessary information. <strong>The App has no backend server. All data is stored exclusively on the user's device.</strong></p>
+
+<h2>2. Information We Collect</h2>
+<p>The App collects and stores the following information:</p>
+<ul>
+  <li><strong>Google Account information:</strong> Email address, display name</li>
+  <li><strong>OAuth access tokens / refresh tokens:</strong> Authentication credentials required to access the Google Calendar API</li>
+  <li><strong>Calendar event information:</strong> Event title, start time, end time</li>
+  <li><strong>Purchase status:</strong> A flag indicating whether the Workspace feature unlock has been purchased (not encrypted)</li>
+  <li><strong>App settings:</strong> Custom account labels, theme colors, default event durations, etc.</li>
+</ul>
+<p>The App does not collect advertising IDs, location data, contacts, photos, microphone data, or similar information.</p>
+
+<h2>3. How We Use Your Information</h2>
+<ul>
+  <li>Google Account information: Used to identify multiple accounts and write to the Google Calendar API</li>
+  <li>Calendar event information: Used solely to create blocking events (out-of-office blocks) on other accounts</li>
+  <li>Purchase status: Used to determine whether the Workspace feature is available</li>
+  <li>App settings: Used to retain user-configured customizations</li>
+</ul>
+
+<h2>4. Data Storage and Security</h2>
+<p>All information is stored only on the user's device. No data is transmitted to external servers.</p>
+<ul>
+  <li><strong>OAuth tokens:</strong> Stored encrypted in the device Keychain (iOS) / Keystore (Android) using <code>flutter_secure_storage</code></li>
+  <li><strong>Purchase status and app settings:</strong> Stored in the device's local storage using <code>shared_preferences</code>. <em>This storage area is not encrypted.</em></li>
+</ul>
+
+<h2>5. Sharing with Third Parties</h2>
+<p>The Developer does not sell or rent user personal information to third parties. Data is shared only with the following services:</p>
+<ul>
+  <li><strong>Google LLC:</strong> For Google Calendar API access and OAuth 2.0 authentication. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+  <li><strong>Apple Inc.:</strong> For in-app purchase processing on the App Store (iOS). <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a></li>
+  <li><strong>Google LLC (Google Play):</strong> For in-app purchase processing on Google Play (Android).</li>
+</ul>
+
+<h2>6. Cross-Account Data Use</h2>
+<p>As a core feature of the App, event information (title, date/time) entered in one account (e.g., personal account A) is used to automatically create a blocking event on another account (e.g., work account B). This data is processed only on the device and is never sent to external servers.</p>
+<p>When Privacy Mode is enabled, only "Out of Office" is sent to other accounts. No event title, location, or description is transmitted.</p>
+
+<h2>7. Data Retention and Deletion</h2>
+<ul>
+  <li><strong>When signing out of an account:</strong> The OAuth tokens and settings for that account are deleted from the device</li>
+  <li><strong>When uninstalling the App:</strong> On iOS, all data except Keychain data is deleted. On Android, all data is deleted</li>
+</ul>
+<p>Users can delete any account at any time from the Account Settings screen within the App.</p>
+
+<h2>8. Children's Privacy</h2>
+<p>The App is not directed at children under the age of 13. The Developer does not knowingly collect personal information from children under 13. If we become aware that personal information from a child under 13 has been collected, we will promptly delete it.</p>
+
+<h2>9. Compliance with Applicable Law</h2>
+<p>The App is operated in compliance with the Act on the Protection of Personal Information (APPI) of Japan and other applicable privacy laws. For requests regarding access, correction, or deletion of personal information, please contact us using the details below.</p>
+
+<h2>10. Changes to This Policy</h2>
+<p>This policy may be updated without prior notice. For significant changes, users will be notified via in-app notification or App Store / Google Play update release notes. Changes take effect upon posting to this page.</p>
+
+<h2>11. Contact</h2>
+<p>For inquiries regarding this policy, please contact:</p>
+<ul>
+  <li>Developer: Daizo Ishida</li>
+  <li>Email: <a href="mailto:ishida@daisan.dev">ishida@daisan.dev</a></li>
+</ul>
+
+<p class="updated">Last updated: April 7, 2026</p>
+
+</body>
+</html>
